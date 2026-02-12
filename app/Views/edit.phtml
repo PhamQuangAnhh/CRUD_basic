@@ -6,10 +6,17 @@
     <title>Customer_add</title>
 </head>
 <body>
-    <form action="index.php?action=edit&id=<?= $data['customer']['id'] ?>" method="post">
+    <form action="index.php?action=edit&id=<?= $data['customer'][
+        'id'
+    ] ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $data['customer']['id'] ?>">
         <label for="name">Name</label>
         <input type="text" name="name" value="<?= $data['customer']['name'] ?>" required>
+        <label for="avatar">Avatar</label>
+        <?php if (!empty($data['customer']['avatar'])): ?>
+            <img src="<?= $data['customer']['avatar'] ?>" width="100">
+        <?php endif; ?>
+        <input type="file" name="avatar">
         <label for="email">Email</label>
         <input type="email" name="email" id="" value="<?= $data['customer']['email'] ?>" required>
         <label for="phone">Phone</label>

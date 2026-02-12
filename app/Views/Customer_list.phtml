@@ -34,6 +34,13 @@
             <tr>
                 <td><?= $customer['id'] ?></td>
                 <td><?= $customer['name'] ?></td>
+                <td>
+                    <?php if (!empty($customer['avatar'])): ?>
+                        <img src="<?= $customer[
+                            'avatar'
+                        ] ?>" width="80" height="80" style="object-fit:cover;">
+                    <?php endif; ?>
+                </td>
                 <td><?= $customer['email'] ?></td>
                 <td><?= $customer['phone'] ?></td>
                 <td><?= $customer['address'] ?></td>

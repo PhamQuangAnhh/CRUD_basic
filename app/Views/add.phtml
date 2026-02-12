@@ -6,9 +6,11 @@
     <title>Customer_add</title>
 </head>
 <body>
-    <form action="index.php?action=add" method="post">
+    <form action="index.php?action=add" method="post" enctype="multipart/form-data">
         <label for="name">Name</label>
         <input type="text" name="name" required>
+        <label for="avatar">Avatar</label>
+        <input type="file" name="avatar">
         <label for="email">Email</label>
         <input type="email" name="email" id="" required>
         <label for="phone">Phone</label>
