@@ -18,6 +18,9 @@ switch ($action) {
     case 'search':
         $app->search();
         break;
+    case 'view':
+        $app->view();
+        break;
     default:
         $app->index();
         break;

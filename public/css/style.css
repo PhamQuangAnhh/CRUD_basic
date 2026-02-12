@@ -2,24 +2,38 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 100%;
-    max-width: 900px;
+    max-width: 1114px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
 
 table thead {
     background-color: #f5f5f5;
     font-weight: bold;
 }
 
-table th, table td {
+table th,
+table td {
     padding: 12px 16px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-
 table tr:last-child td {
     border-bottom: none;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.background {
+    margin: 30px auto;
 }

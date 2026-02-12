@@ -38,7 +38,7 @@
                     <?php if (!empty($customer['avatar'])): ?>
                         <img src="<?= $customer[
                             'avatar'
-                        ] ?>" width="80" height="80" style="object-fit:cover;">
+                        ] ?>" width="80" height="80" style="object-fit:cover; border-radius:50%" >
                     <?php endif; ?>
                 </td>
                 <td><?= $customer['email'] ?></td>
@@ -52,6 +52,7 @@
                     <a onclick="return confirm('Do you want to delete ?')" href="index.php?action=delete&id=<?= $customer[
                         'id'
                     ] ?>">Delete</a>
+                    <a href="index.php?action=view&id=<?= $customer['id'] ?>">View</a>
                 </td>
             </tr>
         <?php endforeach; ?>    

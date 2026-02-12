@@ -135,4 +135,11 @@ class Customer_Controller extends BaseController
             $this->renderView('Customer_list', ['customers' => $customers, 'search' => '']);
         }
     }
+
+    public function view()
+    {
+        $id = $_GET['id'];
+        $customer = $this->customerModel->getById($id);
+        $this->renderView('detail', ['customer' => $customer]);
+    }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="information">
+                <?php if (!empty($data['customer']['avatar'])): ?>
+                    <img class="avatar" src="<?= $data['customer']['avatar'] ?>">
+                <?php endif; ?>
+                <div class="customer_infor">
+                    <p>Name: <?= $data['customer']['name'] ?></p>
+                    <p>Phone: <?= $data['customer']['phone'] ?></p>
+                    <p>Email: <?= $data['customer']['email'] ?></p>
+                    <p>Address: <?= $data['customer']['address'] ?></p>
+                    <p>Gender: <?= $data['customer']['gender'] ?></p>
+                    <p>Status: <?= $data['customer']['status'] ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
